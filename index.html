@@ -1,0 +1,149 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WildQuest | Touch Grass</title>
+    <link rel="stylesheet" href="style.css">
+    <script defer src="https://cdn.jsdelivr.net/npm/@xenova/transformers@2.17.2"></script>
+    <script defer src="script.js"></script>
+</head>
+<body>
+
+    <header>
+        <div class="logo">🌿 WildQuest</div>
+        <span class="ai-label">OPEN-SOURCE AI PROJECT</span>
+    </header>
+
+    <main>
+        <section class="hero">
+            <div class="hero-content">
+                <p class="tagline">LESS SCREEN TIME. MORE LIFE.</p>
+                <h1>Your next adventure<br>starts <span>outside.</span></h1>
+                <p class="description">
+                    Let AI turn your free time into a real-world adventure.
+                    Explore nature, discover little things and reconnect
+                    with the world beyond your screen.
+                </p>
+                <a href="#planner" class="hero-button">Plan my adventure ↓</a>
+            </div>
+
+            <div class="hero-art">
+                <div class="sun"></div>
+                <div class="hill hill-one"></div>
+                <div class="hill hill-two"></div>
+                <div class="hill hill-three"></div>
+                <div class="art-text">THE WORLD IS WAITING 🌼</div>
+            </div>
+        </section>
+
+        <section class="planner" id="planner">
+            <p class="section-label">YOUR PERSONAL OUTDOOR GUIDE</p>
+            <h2>Let's find your next quest.</h2>
+            <p class="subheading">
+                Tell us what you're in the mood for.
+            </p>
+
+            <form id="quest-form">
+                <label for="place">Where do you want to explore?</label>
+                <select id="place">
+                    <option value="a nearby park">A nearby park</option>
+                    <option value="a garden or balcony">Garden or balcony</option>
+                    <option value="my neighbourhood">My neighbourhood</option>
+                    <option value="a nature trail">Nature trail</option>
+                </select>
+
+                <label for="duration">How much time do you have?</label>
+                <select id="duration">
+                    <option value="5 minutes">5 minutes</option>
+                    <option value="15 minutes" selected>15 minutes</option>
+                    <option value="30 minutes">30 minutes</option>
+                    <option value="60 minutes">1 hour</option>
+                </select>
+
+                <label for="mood">What's your mood today?</label>
+                <select id="mood">
+                    <option value="calm and relaxed">Calm and relaxed 🌤️</option>
+                    <option value="curious and playful">Curious and playful 🌱</option>
+                    <option value="active and adventurous">Active and adventurous ⚡</option>
+                </select>
+
+                <label for="interest">What interests you most?</label>
+                <select id="interest">
+                    <option value="birds and wildlife">Birds and wildlife 🐦</option>
+                    <option value="plants and flowers">Plants and flowers 🌼</option>
+                    <option value="walking and movement">Walking and movement 👟</option>
+                    <option value="mindfulness and observation">Mindfulness 🧘</option>
+                </select>
+
+                <button type="submit" id="generate-btn">
+                    Generate My Outdoor Quest ↗
+                </button>
+            </form>
+
+            <p class="privacy">
+                🔒 Designed for local AI inference. No AI API key required.
+            </p>
+        </section>
+
+        <section class="result" id="result" hidden>
+            <div class="result-header">
+                <div>
+                    <p class="section-label">YOUR WILDQUEST</p>
+                    <h2 id="quest-title">Your adventure awaits!</h2>
+                </div>
+                <span id="quest-time" class="time-badge">15 MIN</span>
+            </div>
+
+            <p id="quest-intro" class="subheading"></p>
+
+            <div class="mission-card">
+                <div class="mission-icon">🌳</div>
+                <div>
+                    <h3>Your mission</h3>
+                    <p id="quest-mission"></p>
+                </div>
+            </div>
+
+            <h3 class="steps-heading">Your adventure plan</h3>
+            <ol id="quest-steps"></ol>
+
+            <p id="ai-status" class="ai-status"></p>
+
+            <button type="button" id="done-btn" class="done-button">
+                I'm heading outside 🌿
+            </button>
+
+            <p id="goodbye" hidden class="goodbye">
+                Your mission starts now! Put your phone away,
+                look around and enjoy the real world. 🌎
+            </p>
+        </section>
+
+        <section class="open-ai">
+            <div class="open-icon">✳</div>
+            <div>
+                <p class="section-label">WHY OPEN INNOVATION?</p>
+                <h2>AI that helps you disconnect.</h2>
+                <p>
+                    WildQuest uses an open-weight AI model through
+                    Transformers.js. Its goal is to generate useful
+                    outdoor activities while keeping user preferences
+                    in the browser. Open models give developers more
+                    freedom to inspect, adapt and replace the AI.
+                    No paid inference API is required. The model needs
+                    an initial download, so fully offline operation
+                    depends on browser caching and setup.
+                </p>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>🌿 WildQuest © 2026</p>
+        <p>Go outside. Get curious. Live a little.</p>
+    </footer>
+
+</body>
+</html>
